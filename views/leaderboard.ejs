@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SamaritanOS Demo | Leaderboard</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="css/input.css">
+    <style>
+        .side-bar {
+            background: url("img/stars.jpeg");
+        }
+
+        .side-bar-overlay {
+            background-color: rgba(0, 0, 0, 0.486);
+        }
+    </style>
+</head>
+
+<body class="w-screen h-screen md:grid md:grid-cols-[30%_70%]">
+    <!-- sidebar begins -->
+    <div class="bg-black side-bar bg-center hidden md:block">
+        <div class="side-bar-overlay h-full px-8 py-10 ">
+            <img src="img/algorealm-05.png" class="max-w-[200px]">
+        </div>
+    </div>
+    <div class="md:hidden block pt-6 pl-4">
+        <img src="img/algorealm-04.png" class=" max-w-[150px]">
+    </div>
+    <!-- sidebar ends-->
+    <!-- Main game starts -->
+    <div class="min-h-screen md:flex md:flex-col md:pt-10 pt-4 h-full ">
+        <div class="md:w-[70%] w-[90%] mx-auto flex-grow">
+            <p class="font-light text-xs text-gray-400 border-b border-gray-200 py-2 mb-4">
+                Task 4/9
+            </p>
+            <!-- heading begins -->
+            <p class="text-2xl font-bold">Leaderboard</p>
+            <p class="text-gray-500 text-sm my-5">
+                The leaderboard demonstrates how the application (Tic-Tak-Toe) accesses you data (it doesn't own) and
+                uses it seamlessly in serving its purpose. Here, you
+                see your data being part of the leaderboard because there is no access restriction from you.
+            </p>
+            <!-- subheading  -->
+            <div class="py-3">
+                <div class="flex gap-3 items-center text-xs pb-4 text-gray-400 relative  group">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                        style="fill: rgba(0, 0, 0, 1);transform: msFilter" class="w-[12px] h-[12px]">
+                        <path
+                            d="M8.707 19.707 18 10.414 13.586 6l-9.293 9.293a1.003 1.003 0 0 0-.263.464L3 21l5.242-1.03c.176-.044.337-.135.465-.263zM21 7.414a2 2 0 0 0 0-2.828L19.414 3a2 2 0 0 0-2.828 0L15 4.586 19.414 9 21 7.414z">
+                        </path>
+                    </svg>
+                    Tic-Tak-Toe Leaderboard
+                </div>
+            </div>
+
+            <!-- Leaderboard table begins -->
+            <div class="overflow-x-auto border border-gray-100">
+                <table class="min-w-full table-auto">
+                    <thead class="bg-gray-200">
+                        <tr class="text-left">
+                            <th class="px-4 py-2">Name</th>
+                            <th class="px-4 py-2">Country</th>
+                            <th class="px-4 py-2">Wins</th>
+                            <th class="px-4 py-2">Draws</th>
+                            <th class="px-4 py-2">Losses</th>
+                        </tr>
+                    </thead>
+                    <tbody class="table-body">
+                    </tbody>
+                </table>
+            </div>
+            <!-- Leaderboard table ends-->
+            <button id="end"
+                class="move-to-4 w-full group transition-transform duration-500 ease-in-out bg-black text-white border-none py-2 px-4 cursor-pointer my-5 text-sm">
+                Continue demo
+                <div
+                    class="absolute invisible group-hover:visible w-48 p-2 bg-gray-800 text-white rounded-lg shadow-lg flex gap-3">
+                    💡 We've seen that the application has access to your data (Which is the data it stored about you).
+                    Now we will deny Tic-Tac-Toe access to it.
+                </div>
+            </button>
+        </div>
+
+
+        <div class="bg-gray-300 text-center py-1 md-10">
+            Copyright &copy; 2023 Algorealm Inc. All Rights Reserved
+        </div>
+    </div>
+
+    <script src="js/main.js"></script>
+</body>
+
+</html>

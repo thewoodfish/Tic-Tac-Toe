@@ -3,13 +3,13 @@
 export function metadata() {
     return {
         "source": {
-            "hash": "0x01e5c0cfe3e504beab4356e3b297e57d701533403b774754d8e89697f79726f0",
-            "language": "ink! 4.2.1",
-            "compiler": "rustc 1.69.0",
+            "hash": "0x6b1d5fad38d95e2f6991dcd0b087d1947dd6fc0f309447653a34035cbe778450",
+            "language": "ink! 4.3.0",
+            "compiler": "rustc 1.75.0-nightly",
             "build_info": {
                 "build_mode": "Debug",
-                "cargo_contract_version": "2.0.0-rc",
-                "rust_toolchain": "stable-aarch64-apple-darwin",
+                "cargo_contract_version": "3.2.0",
+                "rust_toolchain": "nightly-aarch64-apple-darwin",
                 "wasm_opt_settings": {
                     "keep_debug_symbols": false,
                     "optimization_passes": "Z"
@@ -17,7 +17,7 @@ export function metadata() {
             }
         },
         "contract": {
-            "name": "db_contract",
+            "name": "contract",
             "version": "0.1.0",
             "authors": [
                 "Algorealm hello@algorealm.org"
@@ -83,7 +83,218 @@ export function metadata() {
                     "type": 13
                 }
             },
-            "events": [],
+            "events": [
+                {
+                    "args": [
+                        {
+                            "docs": [],
+                            "indexed": true,
+                            "label": "did",
+                            "type": {
+                                "displayName": [
+                                    "DID"
+                                ],
+                                "type": 1
+                            }
+                        }
+                    ],
+                    "docs": [
+                        "Contract events"
+                    ],
+                    "label": "AccountCreated"
+                },
+                {
+                    "args": [
+                        {
+                            "docs": [],
+                            "indexed": true,
+                            "label": "address",
+                            "type": {
+                                "displayName": [
+                                    "Multiaddr"
+                                ],
+                                "type": 1
+                            }
+                        }
+                    ],
+                    "docs": [],
+                    "label": "BootNodeAdded"
+                },
+                {
+                    "args": [
+                        {
+                            "docs": [],
+                            "indexed": true,
+                            "label": "address",
+                            "type": {
+                                "displayName": [
+                                    "Multiaddr"
+                                ],
+                                "type": 1
+                            }
+                        }
+                    ],
+                    "docs": [],
+                    "label": "BootNodeRemoved"
+                },
+                {
+                    "args": [
+                        {
+                            "docs": [],
+                            "indexed": true,
+                            "label": "did",
+                            "type": {
+                                "displayName": [
+                                    "DID"
+                                ],
+                                "type": 1
+                            }
+                        },
+                        {
+                            "docs": [],
+                            "indexed": false,
+                            "label": "ipfs_address",
+                            "type": {
+                                "displayName": [
+                                    "CID"
+                                ],
+                                "type": 1
+                            }
+                        }
+                    ],
+                    "docs": [],
+                    "label": "HashTableAddressUpdated"
+                },
+                {
+                    "args": [
+                        {
+                            "docs": [],
+                            "indexed": true,
+                            "label": "entry_value",
+                            "type": {
+                                "displayName": [
+                                    "Vec"
+                                ],
+                                "type": 1
+                            }
+                        }
+                    ],
+                    "docs": [],
+                    "label": "EntryNotFound"
+                },
+                {
+                    "args": [
+                        {
+                            "docs": [],
+                            "indexed": true,
+                            "label": "did",
+                            "type": {
+                                "displayName": [
+                                    "DID"
+                                ],
+                                "type": 1
+                            }
+                        },
+                        {
+                            "docs": [],
+                            "indexed": false,
+                            "label": "node",
+                            "type": {
+                                "displayName": [
+                                    "Multiaddr"
+                                ],
+                                "type": 1
+                            }
+                        }
+                    ],
+                    "docs": [],
+                    "label": "TopicSubscriptionComplete"
+                },
+                {
+                    "args": [
+                        {
+                            "docs": [],
+                            "indexed": true,
+                            "label": "did",
+                            "type": {
+                                "displayName": [
+                                    "DID"
+                                ],
+                                "type": 1
+                            }
+                        },
+                        {
+                            "docs": [],
+                            "indexed": false,
+                            "label": "node",
+                            "type": {
+                                "displayName": [
+                                    "Multiaddr"
+                                ],
+                                "type": 1
+                            }
+                        }
+                    ],
+                    "docs": [],
+                    "label": "TopicUnsubscriptionComplete"
+                },
+                {
+                    "args": [
+                        {
+                            "docs": [],
+                            "indexed": true,
+                            "label": "user_did",
+                            "type": {
+                                "displayName": [
+                                    "DID"
+                                ],
+                                "type": 1
+                            }
+                        },
+                        {
+                            "docs": [],
+                            "indexed": true,
+                            "label": "application_did",
+                            "type": {
+                                "displayName": [
+                                    "DID"
+                                ],
+                                "type": 1
+                            }
+                        }
+                    ],
+                    "docs": [],
+                    "label": "RestrictApplicationAccess"
+                },
+                {
+                    "args": [
+                        {
+                            "docs": [],
+                            "indexed": true,
+                            "label": "user_did",
+                            "type": {
+                                "displayName": [
+                                    "DID"
+                                ],
+                                "type": 1
+                            }
+                        },
+                        {
+                            "docs": [],
+                            "indexed": true,
+                            "label": "application_did",
+                            "type": {
+                                "displayName": [
+                                    "DID"
+                                ],
+                                "type": 1
+                            }
+                        }
+                    ],
+                    "docs": [],
+                    "label": "UnrestrictApplicationAccess"
+                }
+            ],
             "lang_error": {
                 "displayName": [
                     "ink",
@@ -92,6 +303,34 @@ export function metadata() {
                 "type": 5
             },
             "messages": [
+                {
+                    "args": [
+                        {
+                            "label": "did",
+                            "type": {
+                                "displayName": [
+                                    "DID"
+                                ],
+                                "type": 1
+                            }
+                        }
+                    ],
+                    "default": false,
+                    "docs": [
+                        " Checks if a DID exists"
+                    ],
+                    "label": "check_did_existence",
+                    "mutates": false,
+                    "payable": true,
+                    "returnType": {
+                        "displayName": [
+                            "ink",
+                            "MessageResult"
+                        ],
+                        "type": 6
+                    },
+                    "selector": "0x3c5089b2"
+                },
                 {
                     "args": [
                         {
@@ -124,7 +363,7 @@ export function metadata() {
                     ],
                     "default": false,
                     "docs": [
-                        " Creates an account on Samaritan OS"
+                        " Creates an account on the network"
                     ],
                     "label": "new_account",
                     "mutates": true,
@@ -141,34 +380,6 @@ export function metadata() {
                 {
                     "args": [
                         {
-                            "label": "did",
-                            "type": {
-                                "displayName": [
-                                    "DID"
-                                ],
-                                "type": 1
-                            }
-                        }
-                    ],
-                    "default": false,
-                    "docs": [
-                        " Checks if a DID exists"
-                    ],
-                    "label": "check_did_existence",
-                    "mutates": false,
-                    "payable": true,
-                    "returnType": {
-                        "displayName": [
-                            "ink",
-                            "MessageResult"
-                        ],
-                        "type": 6
-                    },
-                    "selector": "0x3c5089b2"
-                },
-                {
-                    "args": [
-                        {
                             "label": "addr",
                             "type": {
                                 "displayName": [
@@ -181,7 +392,7 @@ export function metadata() {
                     "default": false,
                     "docs": [
                         " Adds your network address to the list of nodes using FIFO.",
-                        " This helps us eventuallu remove nodes that may exit without the proper bookkeeping"
+                        " This helps to eventually remove nodes that may exit without the proper bookkeeping"
                     ],
                     "label": "add_address",
                     "mutates": true,
@@ -420,7 +631,7 @@ export function metadata() {
                 {
                     "args": [
                         {
-                            "label": "app_did",
+                            "label": "user_did",
                             "type": {
                                 "displayName": [
                                     "DID"
@@ -428,6 +639,34 @@ export function metadata() {
                                 "type": 1
                             }
                         },
+                        {
+                            "label": "app_did",
+                            "type": {
+                                "displayName": [
+                                    "DID"
+                                ],
+                                "type": 1
+                            }
+                        }
+                    ],
+                    "default": false,
+                    "docs": [
+                        " Add an application to the restricted list"
+                    ],
+                    "label": "restrict",
+                    "mutates": true,
+                    "payable": true,
+                    "returnType": {
+                        "displayName": [
+                            "ink",
+                            "MessageResult"
+                        ],
+                        "type": 3
+                    },
+                    "selector": "0xe8477db4"
+                },
+                {
+                    "args": [
                         {
                             "label": "user_did",
                             "type": {
@@ -438,20 +677,20 @@ export function metadata() {
                             }
                         },
                         {
-                            "label": "allow",
+                            "label": "app_did",
                             "type": {
                                 "displayName": [
-                                    "bool"
+                                    "DID"
                                 ],
-                                "type": 7
+                                "type": 1
                             }
                         }
                     ],
                     "default": false,
                     "docs": [
-                        " Manage the access of an application to a users data space"
+                        " Unrestrict an application's access to user data"
                     ],
-                    "label": "manage_access",
+                    "label": "unrestrict",
                     "mutates": true,
                     "payable": true,
                     "returnType": {
@@ -461,7 +700,7 @@ export function metadata() {
                         ],
                         "type": 3
                     },
-                    "selector": "0x9546841b"
+                    "selector": "0x48906e1e"
                 },
                 {
                     "args": [
@@ -477,9 +716,9 @@ export function metadata() {
                     ],
                     "default": false,
                     "docs": [
-                        " Get all the actors that have denied an application access to their data space"
+                        " Fetch users that have restricted applications"
                     ],
-                    "label": "get_blockers",
+                    "label": "get_restriction_list",
                     "mutates": false,
                     "payable": true,
                     "returnType": {
@@ -489,7 +728,7 @@ export function metadata() {
                         ],
                         "type": 8
                     },
-                    "selector": "0x846d3aa6"
+                    "selector": "0x1a036ec2"
                 }
             ]
         },
@@ -864,5 +1103,5 @@ export function metadata() {
             }
         ],
         "version": "4"
-    }
+    };
 }

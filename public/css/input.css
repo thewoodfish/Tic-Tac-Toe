@@ -1,0 +1,14 @@
+@import url(https://fonts.googleapis.com/css?family=Itim:regular);
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html,body{
+    font-family: 'Itim',cursive;
+}
+
+@media (max-width: 640px) {
+    .phone {
+      max-width: 640px; /* Adjust the max-width value as needed */
+    }
+}

@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SamaritanOS Demo | Tik-Tac-Toe</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="css/input.css">
+    <style>
+        .side-bar {
+            background: url("img/tic-tac-toe.jpeg");
+        }
+
+        .side-bar-overlay {
+            background-color: rgba(0, 0, 0, 0.486);
+        }
+    </style>
+</head>
+
+<body class="w-screen h-screen md:grid md:grid-cols-[30%_70%]">
+    <!-- sidebar begins -->
+    <div class="bg-black side-bar bg-center hidden md:block">
+        <div class="side-bar-overlay h-full px-8 py-10 ">
+            <img src="img/algorealm-05.png" class="max-w-[200px]">
+        </div>
+    </div>
+    <div class="md:hidden block pt-6 pl-4">
+        <img src="img/algorealm-04.png" class=" max-w-[150px]">
+    </div>
+    <!-- sidebar ends-->
+    <!-- Main game starts -->
+    <div class="min-h-screen md:flex md:flex-col md:pt-10 pt-4 h-full ">
+        <div class="md:w-[70%] w-[90%] mx-auto flex-grow">
+            <p class="font-light text-xs text-gray-400 border-b border-gray-100 py-2 mb-4">
+                Task 3/9
+            </p>
+            <!-- heading begins -->
+            <p class="text-2xl font-bold">Tik-Tak-Toe Game</p>
+
+            <p class="text-gray-600 text-sm my-5">
+                Here you'll play against the computer 5 times and earn scores according to the game's outcome. The data (your scores) the application stores
+                are about you and SamaritanDB will store it in such a way that gives you sovreignty over it, across the internet. This is despite the fact that the application
+                is the one storing it.
+            </p>
+            <!-- subheading  -->
+            <div class="py-3">
+                <div class="flex gap-3 items-center text-xs pb-4 text-gray-400 relative  group">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                        style="fill: rgba(0, 0, 0, 1);transform: msFilter" class="w-[12px] h-[12px]">
+                        <path
+                            d="M8.707 19.707 18 10.414 13.586 6l-9.293 9.293a1.003 1.003 0 0 0-.263.464L3 21l5.242-1.03c.176-.044.337-.135.465-.263zM21 7.414a2 2 0 0 0 0-2.828L19.414 3a2 2 0 0 0-2.828 0L15 4.586 19.414 9 21 7.414z">
+                        </path>
+                    </svg>
+                    In this section, you have 5 trials against the computer. <span class="text-gray-600">Click on an
+                        empty tile to start game.</span>
+                </div>
+            </div>
+
+            <div class="border-l-8 bg-gray-100 border-gray-800 text-black flex justify-between p-4 mb-4">
+                <p class="text-lg leading-5 gap-1 flex">
+                    <span class="game-trials text-red-600">5</span> <span>game trials left</span>
+                </p>
+            </div>
+            <div
+                class="player-indicator border-l-8  text-black flex bg-green-100 border-green-800 justify-between p-4 mb-4 ">
+                <p class="text-xs leading-5 flex-1">
+                    It's <span class="font-2xl game-player">your</span> turn to play
+                </p>
+            </div>
+            <div id="main-game" class="main-game">
+                <div
+                    class="grid grid-cols-3 grid-rows-3  bg-gray-500 gap-[1px] md:h-[400px] h-[200px] border border-gray-600 shadow-lg">
+                    <!-- Game board -->
+                    <div id="square-1"
+                        class="game-tile max-w-full max-h-full bg-white flex items-center border border-slate-100 justify-center text-4xl font-bold cursor-pointer">
+                    </div>
+                    <div id="square-2"
+                        class="game-tile max-w-full max-h-full bg-white flex items-center border border-slate-100 justify-center text-4xl font-bold cursor-pointer">
+
+                    </div>
+                    <div id="square-3"
+                        class="game-tile max-w-full max-h-full bg-white border border-slate-100 flex items-center justify-center text-4xl font-bold cursor-pointer">
+
+                    </div>
+                    <div id="square-4"
+                        class="game-tile max-w-full max-h-full bg-white flex items-center border border-slate-100 justify-center text-4xl font-bold cursor-pointer">
+
+                    </div>
+                    <div id="square-5"
+                        class="game-tile max-w-full max-h-full bg-white flex items-center border border-slate-100 justify-center text-4xl font-bold cursor-pointer">
+
+                    </div>
+                    <div id="square-6"
+                        class="game-tile max-w-full max-h-full bg-white border border-slate-100 flex items-center justify-center text-4xl font-bold cursor-pointer">
+
+                    </div>
+                    <div id="square-7"
+                        class="game-tile max-w-full max-h-full bg-white border border-slate-100 flex items-center justify-center text-4xl font-bold cursor-pointer">
+
+                    </div>
+                    <div id="square-8"
+                        class="game-tile max-w-full max-h-full bg-white border border-slate-100 flex items-center justify-center text-4xl font-bold cursor-pointer">
+
+                    </div>
+                    <div id="square-9"
+                        class="game-tile max-w-full max-h-full bg-white border border-slate-100 flex items-center justify-center text-4xl font-bold cursor-pointer">
+
+                    </div>
+                </div>
+                <div class="game-verdict-text mt-4 text-2xl text-center hidden">
+                    You <span class="game-verdict"></span> this game round!
+                </div>
+            </div>
+            <div class="text-center mt-4 view-leaderboard hidden">
+                <button id="move"
+                    class="move-to-3 group flex gap-2 w-full justify-center animate-bounce transition-transform duration-500 ease-in-out bg-black text-white border-none py-2 px-4 cursor-pointer my-5 text-sm">
+                    <span>View Leaderboard</span>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                        style="fill: #fff;">
+                        <path d="m11.293 17.293 1.414 1.414L19.414 12l-6.707-6.707-1.414 1.414L15.586 11H6v2h9.586z">
+                        </path>
+                    </svg>
+                    <div
+                        class="absolute invisible group-hover:visible w-48 p-2 mt-6 bg-gray-800 text-white rounded-lg shadow-lg flex gap-3">
+                        💡 Let's check where you rank on the leaderboard!
+                    </div>
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <script src="js/main.js"></script>
+    <script src="js/game.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SamaritanDB Demo | Mutate Network</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="css/input.css">
+    <style>
+        .side-bar {
+            background: url("img/cyber.jpeg");
+        }
+
+        .side-bar-overlay {
+            background-color: rgba(0, 0, 0, 0.486);
+        }
+    </style>
+</head>
+
+<body class="w-screen h-screen md:grid md:grid-cols-[30%_70%]">
+    <!-- sidebar begins -->
+    <div class="bg-black side-bar bg-center hidden md:block">
+        <div class="side-bar-overlay h-full px-8 py-10 ">
+            <img src="img/algorealm-05.png" class="max-w-[200px]">
+        </div>
+    </div>
+    <div class="md:hidden block pt-6 pl-4">
+        <img src="img/algorealm-04.png" class=" max-w-[150px]">
+    </div>
+    <!-- sidebar ends-->
+    <!-- Main game starts -->
+    <div class="min-h-screen md:flex md:flex-col md:pt-10 pt-4 h-full ">
+        <div class="md:w-[70%] w-[90%] mx-auto flex-grow">
+            <p class="font-light text-xs text-gray-400 border-b border-gray-200 py-2 mb-4">
+                Task 5/9
+            </p>
+            <!-- heading begins -->
+            <p class="text-2xl font-bold">Mutate Network</p>
+            <p class="text-gray-500 text-sm my-5">
+                This is the moment we've been building up to! We will demonstrate one important WHY of SamaritanDB. You will
+                submit a request to the network to deny
+                the game access to your data on the internet, which it references on its leader board. The application
+                will only be able to write and do nothing else.
+                Let’s check it out!
+            </p>
+            <!-- subheading  -->
+            <div class="pt-5">
+                <div class="flex gap-3 items-center text-xs pb-4 text-gray-400 relative  group">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                        style="fill: rgba(0, 0, 0, 1);transform: msFilter" class="w-[12px] h-[12px]">
+                        <path
+                            d="M8.707 19.707 18 10.414 13.586 6l-9.293 9.293a1.003 1.003 0 0 0-.263.464L3 21l5.242-1.03c.176-.044.337-.135.465-.263zM21 7.414a2 2 0 0 0 0-2.828L19.414 3a2 2 0 0 0-2.828 0L15 4.586 19.414 9 21 7.414z">
+                        </path>
+                    </svg>
+                    Make your decisions known and executed on the network.
+                </div>
+            </div>
+
+            <div class="flex flex-col w-full border border-gray-100 p-6">
+                <form action="" class="flex flex-col gap-4">
+                    <div id="form-group">
+                        <div class="group">
+                            <label for="smDid" class="text-sm text-gray-800 mb-2 block">Samaritan DID</label>
+                            <input disabled type="text" name="samaritan_did" id="smDid"
+                                placeholder="Enter your Samaritan DID"
+                                class="form-input samaritan_did border border-gray-200 text-xs text-gray-500 w-full py-2 px-3 focus:outline-none">
+                            <div
+                                class="absolute text-sm invisible group-hover:visible w-48 p-2 bg-gray-800 text-white rounded-lg shadow-lg flex gap-3">
+                                💡 This is your SamaritanDB DID. It identifies you and your data across the internet.
+                            </div>
+                        </div>
+                    </div>
+                    <div id="form-group">
+                        <div class="group">
+                            <label for="appDid" class="text-sm text-gray-800 mb-2 block">Applcation's DID</label>
+                            <input disabled type="text" name="application_did" id="appDid"
+                                placeholder="Enter the application's DID"
+                                value="did:sam:apps:5GWH4sLKB3NB3iKB8e4zcQmouoCbjwF9372Kgo7qgSYbwAGq"
+                                class="form-input border border-gray-200 text-xs text-gray-500 w-full py-2 px-3 focus:outline-none">
+                            <div
+                                class="absolute text-sm invisible group-hover:visible w-48 p-2 bg-gray-800 text-white rounded-lg shadow-lg flex gap-3">
+                                💡 This is the DID of the Tic-Tac-Toe game. You'll submit it to the network as the
+                                application in which you don't want to access your data.
+                            </div>
+                        </div>
+                    </div>
+                    <div id="form-group">
+                        <label for="action" class="text-sm text-gray-800 mb-2 block">Action</label>
+                        <select id="action" name="action"
+                            class="form-input w-full border border-gray-200 text-gray-500 p-2 rounded-md appearance-none focus:outline-none text-xs">
+                            <option value="" selected disabled>Select an action</option>
+                            <option value="deny">Deny application access</option>
+                            <option disabled value="allow">Allow application access</option>
+                        </select>
+                    </div>
+                    <div id="form-group">
+                        <div class="group">
+                            <label for="privateKey" class="text-smm text-gray-800 mb-2 block">Private Key</label>
+                            <input type="text" id="private-keys" name="private_key" disabled
+                                value="dilemma quarter decrease simple climb boring liberty tobacco upper axis neutral suit"
+                                class="form-input border border-gray-200 text-xs text-gray-500 w-full py-2 px-3 focus:outline-none">
+                            <div
+                                class="absolute invisible group-hover:visible w-[300px] p-2 bg-gray-800 text-white rounded-lg shadow-lg flex gap-3">
+                                💡 Your private keys ensure you are the one making the request and no one else. We use
+                                our private keys here because your account is
+                                not funded. In production, only you can make the changes.
+                            </div>
+                        </div>
+                    </div>
+                    <div class="important-data hidden" data-next="6"
+                        data-hint="Now that you've denied the application access to your data across the internet, we will check the leaderboard again.">
+                    </div>
+                    <div class="group">
+                        <button id="submit" onclick="return false"
+                            class="justify-center flex gap-2 mutate-btn w-full transition-transform duration-500 ease-in-out bg-black text-white border-none py-2 px-4 cursor-pointer my-5 text-sm">
+                            <svg xmlns="http://www.w3.org/2000/svg"
+                                class="animate-spin h-[20px] w-[20px] stroke-white hidden" viewBox="0 0 24 24"
+                                style="fill: #fff;">
+                                <path
+                                    d="M2 11h5v2H2zm15 0h5v2h-5zm-6 6h2v5h-2zm0-15h2v5h-2zM4.222 5.636l1.414-1.414 3.536 3.536-1.414 1.414zm15.556 12.728-1.414 1.414-3.536-3.536 1.414-1.414zm-12.02-3.536 1.414 1.414-3.536 3.536-1.414-1.414zm7.07-7.071 3.536-3.535 1.414 1.415-3.536 3.535z">
+                                </path>
+                            </svg>
+                            <span>Submit Request</span>
+                        </button>
+                        <div
+                            class="absolute invisible group-hover:visible w-[300px] -m-7 p-2 bg-gray-800 text-white rounded-lg shadow-lg flex gap-3">
+                            💡 You will be submitting a transaction to the network to enforce your will across all
+                            devices that are part of the network on the internet.
+                        </div>
+                    </div>
+
+                </form>
+            </div>
+        </div>
+
+        <div class="bg-gray-300 text-center py-1 mt-10">
+            Copyright &copy; 2023 Algorealm Inc. All Rights Reserved
+        </div>
+    </div>
+
+    <script src="js/main.js"></script>
+</body>
+
+</html>
