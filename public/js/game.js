@@ -259,7 +259,7 @@ window.addEventListener('DOMContentLoaded', () => {
         });
 
         let trials = parseInt(gameTrials.innerText) - 1;
-        if (trials > -1) {
+        if (trials > 0) {
             gameTrials.innerText = trials;
         } else {
             // game over, move to next screen
