@@ -232,36 +232,39 @@ document.addEventListener("DOMContentLoaded", function () {
             })
                 .then(async res => {
                     await res.json().then(res => {
+                        let player = {};
                         if (!res.error) {
-                            let player = res.data;
-                            let [name, win, draw, loss, country] = [player.name, player.win, player.draw, player.loss, player.country];
-                            let players = {
-                                "Gabrielle Chanel": [3, 1, 1, "France"],
-                                "David Ogilvy": [2, 3, 0, "UK"],
-                                "Steve Jobs": [2, 2, 1, "USA"],
-                            };
+                            player = res.data;
+                        }
+                        
+                        let [name, win, draw, loss, country] = [player.name, player.win, player.draw, player.loss, player.country];
+                        let players = {
+                            "Gabrielle Chanel": [3, 1, 1, "France"],
+                            "David Ogilvy": [2, 3, 0, "UK"],
+                            "Steve Jobs": [2, 2, 1, "USA"],
+                        };
 
-                            if (!url.includes("leaderboard2"))
-                                players[name] = [win, draw, loss, country];
+                        if (!url.includes("leaderboard2"))
+                            players[name] = [win, draw, loss, country];
 
-                            // Calculate total points for each player
-                            for (const playerName in players) {
-                                const [playerWins, playerDraws, playerLosses] = players[playerName];
-                                const totalPoints = playerWins * 3 + playerDraws * 1 + playerLosses * 0;
-                                players[playerName].push(totalPoints);
-                            }
+                        // Calculate total points for each player
+                        for (const playerName in players) {
+                            const [playerWins, playerDraws, playerLosses] = players[playerName];
+                            const totalPoints = playerWins * 3 + playerDraws * 1 + playerLosses * 0;
+                            players[playerName].push(totalPoints);
+                        }
 
-                            // Sort the players based on total points (descending order)
-                            const sortedPlayers = Object.keys(players).sort((a, b) => players[b][4] - players[a][4]);
+                        // Sort the players based on total points (descending order)
+                        const sortedPlayers = Object.keys(players).sort((a, b) => players[b][4] - players[a][4]);
 
-                            // Create rows for the sorted players
-                            let rows = [];
-                            let table = document.querySelector(".table-body"); // Use 'document' instead of 'qs'
-                            table.innerHTML = "";
-                            for (const playerName of sortedPlayers) {
-                                const [playerWins, playerDraws, playerLosses, playerCountry, playerPoints] = players[playerName];
+                        // Create rows for the sorted players
+                        let rows = [];
+                        let table = document.querySelector(".table-body"); // Use 'document' instead of 'qs'
+                        table.innerHTML = "";
+                        for (const playerName of sortedPlayers) {
+                            const [playerWins, playerDraws, playerLosses, playerCountry, playerPoints] = players[playerName];
 
-                                table.innerHTML += `
+                            table.innerHTML += `
                     <tr class="${playerName === name ? "bg-gray-100 group" : ""} hover:bg-gray-200 border-b">
                         <td class="px-4 py-2">${playerName == name ? "You" : playerName}</td>
                         <td class="px-4 py-2">${playerCountry}</td>
@@ -269,9 +272,6 @@ document.addEventListener("DOMContentLoaded", function () {
                         <td class="px-4 py-2">${playerDraws}</td>
                         <td class="px-4 py-2">${playerLosses}</td>
                     </tr>`;
-                            }
-                        } else {
-                            console.log(res.data.msg);
                         }
                     })
                 });

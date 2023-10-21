@@ -34,14 +34,12 @@
     <div class="min-h-screen md:flex md:flex-col md:pt-10 pt-4 h-full ">
         <div class="md:w-[70%] w-[90%] mx-auto flex-grow">
             <p class="font-light text-xs text-gray-400 border-b border-gray-200 py-2 mb-4">
-                Task 4/9
+                Task 8/9
             </p>
             <!-- heading begins -->
             <p class="text-2xl font-bold">Leaderboard</p>
             <p class="text-gray-500 text-sm my-5">
-                The leaderboard demonstrates how the application (Tic-Tak-Toe) accesses you data (it doesn't own) and
-                uses it seamlessly in serving its purpose. Here, you
-                see your data being part of the leaderboard because there is no access restriction from you.
+                You should now be able to see your leaderboard details because you've allowed the application access to the data that it depends on.
             </p>
             <!-- subheading  -->
             <div class="py-3">
@@ -74,18 +72,20 @@
             </div>
             <!-- Leaderboard table ends-->
             <button id="end"
-                class="move-to-4 w-full group transition-transform duration-500 ease-in-out bg-black text-white border-none py-2 px-4 cursor-pointer my-5 text-sm">
-                Continue demo
-                <div
+                class="flex justify-center gap-2 move-to-end w-full group transition-transform duration-500 ease-in-out bg-black text-white border-none py-2 px-4 cursor-pointer my-5 text-sm">
+                <span>End demo</span>
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" style="fill: #fff;">
+                    <path d="m11.293 17.293 1.414 1.414L19.414 12l-6.707-6.707-1.414 1.414L15.586 11H6v2h9.586z">
+                    </path>
+                </svg>
+                <!-- <div
                     class="absolute invisible group-hover:visible w-48 p-2 bg-gray-800 text-white rounded-lg shadow-lg flex gap-3">
-                    💡 We've seen that the application has access to your data (Which is the data it stored about you).
-                    Now we will deny Tic-Tac-Toe access to it.
-                </div>
+                    💡 Now we will summarize all we've learnt so far
+                </div> -->
             </button>
         </div>
 
-
-        <div class="bg-gray-300 text-center py-1 md-10">
+        <div class="bg-gray-300 text-center py-1 mt-10">
             Copyright &copy; 2023 Algorealm Inc. All Rights Reserved
         </div>
     </div>

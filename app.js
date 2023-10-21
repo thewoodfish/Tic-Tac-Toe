@@ -105,6 +105,22 @@ app.post('/notify-network', (req, res) => {
     makeAccessChange(req.body, res);
 });
 
+app.get('/leaderboard2', async (req, res) => {
+    res.render('leaderboard2');
+});
+
+app.get('/mutate2', async (req, res) => {
+    res.render('mutate2');
+});
+
+app.get('/leaderboard3', async (req, res) => {
+    res.render('leaderboard3');
+});
+
+app.get('/thanks', async (req, res) => {
+    res.render('thanks');
+});
+
 async function makeAccessChange(req, res) {
     // try {
         const user = keyring.createFromUri(req.keys, 'sr25519');
