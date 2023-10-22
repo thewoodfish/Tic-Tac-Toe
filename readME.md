@@ -9,17 +9,15 @@ For a detailed understanding of SamaritanDB, please visit [the wiki](https://alg
 
 ## Flow
 
-1. **Generate Your DID**: Start by creating your Decentralized Identifier (DID). This unique identifier is the key to your digital presence in the game.
+1. **Generate Your DID**: Start by creating your Decentralized Identifier (DID). This unique identifier is the key to your digital presence on the internet and interactiing with applications like the game.
 
 ![Generate Your DID](https://github.com/thewoodfish/Tic-Tac-Toe/blob/main/public/img/screenshot-1.png)
 
 ![Generate Your DID](https://github.com/thewoodfish/Tic-Tac-Toe/blob/main/public/img/screen-2.png)
 
-![Submit to the Game](submit-to-game-image.png)
+2. **Interact With The Game**: Send your DID and other necessary details to the game. Your information will be stored in SamaritanDB, ready for action.
 
-2. **Submit to the Game**: Send your DID and other necessary details to the game. Your information will be stored in SamaritanDB, ready for action.
-
-![Leaderboard](leaderboard-image.png)
+![Interact with the game](https://github.com/thewoodfish/Tic-Tac-Toe/blob/main/public/img/screen-3.png)
 
 3. **Leaderboard**: After you've submitted your data, you can play the game and keep an eye on your progress through the leaderboard.
 
