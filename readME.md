@@ -57,6 +57,16 @@ The application communicates with SamaritanDB through a dedicated library. This 
 
 Although experimental, SamaritanDB serves as a proof of concept for future development. The code provides a foundation for revolutionary ideas. View the code [here](https://github.com/algorealmInc/SamaritanDB).
 
+## Testing
+
+To test the application, follow these steps:
+
+1. Clone the repository.
+2. Clone the [SamaritanDB](https://github.com/algorealmInc/SamaritanDB) repository and follow the instructions to run it.
+3. Run `npm install`.
+4. Open `127.0.0.0.1:3000` in your web browser.
+5. Enjoy!
+
 ## Contract
 
 SamaritanDB heavily utilizes the ink! smart contract. In Tic-Tac-Toe, the contract is referenced in specific instances:
@@ -122,5 +132,5 @@ await chain
 The ink! smart contract is the backbone of the network. To gain a deeper understanding of how the contract operates and empowers users, please review the full code [here](https://github.com/algorealmInc/SamaritanDB-Contract).
 
 This project also exemplifies the potential of ink! and blockchain technology to empower users and revolutionize our interactions with digital applications and services.
- 
+
 🚀 _Together, we're shaping a future where users have full control of their data._ 🚀
