@@ -19,6 +19,8 @@ For a detailed understanding of SamaritanDB, please visit [the wiki](https://alg
 
 ![Interact with the game](https://github.com/thewoodfish/Tic-Tac-Toe/blob/main/public/img/screen-3.png)
 
+![Interact with the game](https://github.com/thewoodfish/Tic-Tac-Toe/blob/main/public/img/screen-4.png)
+
 3. **Leaderboard**: After you've submitted your data, you can play the game and keep an eye on your progress through the leaderboard.
 
 ![Deny Access](deny-access-image.png)
