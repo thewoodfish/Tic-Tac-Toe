@@ -122,5 +122,5 @@ await chain
 The Ink! smart contract is the backbone of the network. To gain a deeper understanding of how the contract operates and empowers users, please review the full code here.
 
 This project also exemplifies the potential of Ink! and blockchain technology to empower users and revolutionize our interactions with digital applications and services.
-
+ 
 🚀 _Together, we're shaping a future where users have full control of their data._ 🚀
