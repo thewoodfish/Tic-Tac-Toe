@@ -25,13 +25,13 @@ For a detailed understanding of SamaritanDB, please visit [the wiki](https://alg
 
 ![Leaderboards](https://github.com/thewoodfish/Tic-Tac-Toe/blob/main/public/img/screen-5.png)
 
-![Deny Access](deny-access-image.png)
-
 4. **Deny Access**: Suppose you decide to deny the application access to your data. By submitting a transaction, you block access to your information.
 
-![Data Absence](data-absence-image.png)
+![Deny Access](https://github.com/thewoodfish/Tic-Tac-Toe/blob/main/public/img/screen-6.png)
 
 5. **Data Absence**: Check the leaderboard, and you'll see your data has disappeared. Access denial had an immediate impact.
+
+![Data Absence](https://github.com/thewoodfish/Tic-Tac-Toe/blob/main/public/img/screen-6.png)
 
 ![Grant Access](grant-access-image.png)
 
