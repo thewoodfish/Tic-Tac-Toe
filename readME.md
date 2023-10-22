@@ -5,8 +5,9 @@
 In this section, we delve into a comprehensive demonstration of an application built upon the robust infrastructure of SamaritanDB. This demonstration showcases the essential components that drive the platform's functionality.
 
 SamaritanDB represents a pioneering database solution engineered to offer internet users unprecedented control and sovereignty over their data within applications hosted on this innovative platform. In this context, we explore a practical application, the Tic-Tac-Toe game, as an example of how SamaritanDB empowers users to take charge of their digital interactions.
+For a detailed understanding of SamaritanDB, please visit [the wiki](https://algorealm.gitbook.io/samaritandb).
 
-## Goal
+## Flow
 
 ![Generate Your DID](did-generation-image.png)
 
