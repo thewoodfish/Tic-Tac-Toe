@@ -39,8 +39,7 @@ For a detailed understanding of SamaritanDB, please visit [the wiki](https://alg
 
 7. **Data Returns**: Visit the leaderboard, and your data is back in the game. It's all about user control and data ownership.
 
-![Deny Access](https://github.com/thewoodfish/Tic-Tac-Toe/blob/main/public/img/screen-6.png)
-
+![Deny Access](https://github.com/thewoodfish/Tic-Tac-Toe/blob/main/public/img/screen-9.png)
 
 ## Significance
 
