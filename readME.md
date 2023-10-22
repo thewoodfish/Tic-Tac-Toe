@@ -56,9 +56,9 @@ The application communicates with SamaritanDB through a dedicated library. This 
 Although experimental, SamaritanDB serves as a proof of concept for future development. The code provides a foundation for revolutionary ideas. View the code [here](https://github.com/algorealmInc/SamaritanDB)
 
 ## Contract
-<p style="text-align: center">
+<div style="text-align: center">
   <img src="https://use.ink/img/text-black.svg" width="200" alt="Ink! Contract">
-</p>
+</div>
 
 The ink! smart contract is at the core of the network. Learn more about how the contract operates and facilitates user empowerment.
 
