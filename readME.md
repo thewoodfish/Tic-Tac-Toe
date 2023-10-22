@@ -9,19 +9,19 @@ For a detailed understanding of SamaritanDB, please visit [the wiki](https://alg
 
 ## Flow
 
-1. **Generate Your DID**: Start by creating your Decentralized Identifier (DID). This unique identifier is the key to your digital presence on the internet and interactiing with applications like the game.
+1. **Generate Your DID**: Start by creating your Decentralized Identifier (DID). This unique identifier is the key to your digital presence on the internet and interactions with applications like the game.
 
 ![Generate Your DID](https://github.com/thewoodfish/Tic-Tac-Toe/blob/main/public/img/screenshot-1.png)
 
 ![Generate Your DID](https://github.com/thewoodfish/Tic-Tac-Toe/blob/main/public/img/screen-2.png)
 
-2. **Interact With The Game**: Send your DID and other necessary details to the game. Your information will be stored in SamaritanDB, ready for action.
+2. **Interact With The Game**: Send your DID and other necessary details to the game. All you scored and progress is stored in association to your DID. Your information will be stored in SamaritanDB, ready for action.
 
 ![Interact with the game](https://github.com/thewoodfish/Tic-Tac-Toe/blob/main/public/img/screen-3.png)
 
 ![Interact with the game](https://github.com/thewoodfish/Tic-Tac-Toe/blob/main/public/img/screen-4.png)
 
-3. **Leaderboard**: After you've submitted your data and played the few gmae trials, you can keep an eye on your progress through the leaderboard.
+3. **Leaderboard**: After you've submitted your data and played the few game trials, you can keep an eye on your progress through the leaderboard.
 
 ![Leaderboards](https://github.com/thewoodfish/Tic-Tac-Toe/blob/main/public/img/screen-5.png)
 
@@ -42,34 +42,22 @@ For a detailed understanding of SamaritanDB, please visit [the wiki](https://alg
 ![Deny Access](https://github.com/thewoodfish/Tic-Tac-Toe/blob/main/public/img/screen-9.png)
 
 ## Significance
-
-![User Empowerment](user-empowerment-image.png)
-
 This project demonstrates the potential of user control and ownership over the content and information provided to internet applications and services.
 
 ## How It Works
 
-![Ink! Smart Contract](ink-contract-image.png)
-
-The ink! smart contract powers this project. Users send requests to the contract, generating events and making blockchain state changes. SamaritanDB nodes worldwide respond to these events, adapting to user decisions.
-
-![SamaritanDB Communication](communication-image.png)
+The ink! smart contract powers this project. Users send requests to the contract, generating events and making blockchain state changes. SamaritanDB nodes worldwide respond to these events and state changes, adapting to user decisions.
 
 ## Talking to SamaritanDB
-
-![Library Integration](library-integration-image.png)
 
 The application communicates with SamaritanDB through a dedicated library. This integration is vital for seamless data management.
 
 ## Database
-
-![SamaritanDB Code](samaritandb-code-image.png)
-
-Although experimental, SamaritanDB serves as a proof of concept for future development. The code provides a foundation for revolutionary ideas.
+Although experimental, SamaritanDB serves as a proof of concept for future development. The code provides a foundation for revolutionary ideas. View the code [here](https://github.com/algorealmInc/SamaritanDB)
 
 ## Contract
 
-![Ink! Contract](ink-contract-image.png)
+![Ink! Contract](https://use.ink/img/text-black.svg)
 
 The ink! smart contract is at the core of the network. Learn more about how the contract operates and facilitates user empowerment.
 
