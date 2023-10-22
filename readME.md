@@ -59,9 +59,9 @@ Although experimental, SamaritanDB serves as a proof of concept for future devel
 
 ## Contract
 
-SamaritanDB heavily utilizes the Ink! smart contract. In Tic-Tac-Toe, the contract is referenced in specific instances:
+SamaritanDB heavily utilizes the ink! smart contract. In Tic-Tac-Toe, the contract is referenced in specific instances:
 
-1. **Generate DID**: User Decentralized Identifiers (DIDs) and private keys are generated, creating a user account on-chain. A transaction is submitted to the Ink! contract to mutate storage.
+1. **Generate DID**: User Decentralized Identifiers (DIDs) and private keys are generated, creating a user account on-chain. A transaction is submitted to the ink! contract to mutate storage.
 
 ```js
 // JavaScript Code
@@ -94,7 +94,7 @@ let user_exists = await chain.checkDidExistence(
 ...
 ```
 
-3. **Make Network data access change**: Ink! plays a pivotal role in this project. A user submits their DID and an application's DID to the contract to enforce data access restrictions or allowances.
+3. **Make Network data access change**: ink! plays a pivotal role in this project. A user submits their DID and an application's DID to the contract to enforce data access restrictions or allowances.
 
 ```js
 // JavaScript Code
@@ -119,8 +119,8 @@ await chain
 ...
 ```
 
-The Ink! smart contract is the backbone of the network. To gain a deeper understanding of how the contract operates and empowers users, please review the full code here.
+The ink! smart contract is the backbone of the network. To gain a deeper understanding of how the contract operates and empowers users, please review the full code [here](https://github.com/algorealmInc/SamaritanDB-Contract).
 
-This project also exemplifies the potential of Ink! and blockchain technology to empower users and revolutionize our interactions with digital applications and services.
+This project also exemplifies the potential of ink! and blockchain technology to empower users and revolutionize our interactions with digital applications and services.
  
 🚀 _Together, we're shaping a future where users have full control of their data._ 🚀
