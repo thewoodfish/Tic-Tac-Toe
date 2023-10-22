@@ -13,6 +13,8 @@ For a detailed understanding of SamaritanDB, please visit [the wiki](https://alg
 
 ![Generate Your DID](https://github.com/thewoodfish/Tic-Tac-Toe/blob/main/public/img/screenshot-1.png)
 
+![Generate Your DID](https://github.com/thewoodfish/Tic-Tac-Toe/blob/main/public/img/screen-2.png)
+
 ![Submit to the Game](submit-to-game-image.png)
 
 2. **Submit to the Game**: Send your DID and other necessary details to the game. Your information will be stored in SamaritanDB, ready for action.
