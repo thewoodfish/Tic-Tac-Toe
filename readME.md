@@ -31,15 +31,16 @@ For a detailed understanding of SamaritanDB, please visit [the wiki](https://alg
 
 5. **Data Absence**: Check the leaderboard, and you'll see your data has disappeared. Access denial had an immediate impact.
 
-![Data Absence](https://github.com/thewoodfish/Tic-Tac-Toe/blob/main/public/img/screen-6.png)
-
-![Grant Access](grant-access-image.png)
+![Data Absence](https://github.com/thewoodfish/Tic-Tac-Toe/blob/main/public/img/screen-7.png)
 
 6. **Grant Access**: Change your mind and decide to allow access again. Submit a transaction to grant access once more.
 
-![Data Returns](data-returns-image.png)
+![Deny Access](https://github.com/thewoodfish/Tic-Tac-Toe/blob/main/public/img/screen-8.png)
 
 7. **Data Returns**: Visit the leaderboard, and your data is back in the game. It's all about user control and data ownership.
+
+![Deny Access](https://github.com/thewoodfish/Tic-Tac-Toe/blob/main/public/img/screen-6.png)
+
 
 ## Significance
 
