@@ -9,7 +9,7 @@ For a detailed understanding of SamaritanDB, please visit [the wiki](https://alg
 
 ## Flow
 
-![Generate Your DID](did-generation-image.png)
+![Generate Your DID](https://github.com/thewoodfish/Tic-Tac-Toe/blob/main/public/img/screenshot-1.png)
 
 1. **Generate Your DID**: Start by creating your Decentralized Identifier (DID). This unique identifier is the key to your digital presence in the game.
 
