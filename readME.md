@@ -42,6 +42,7 @@ For a detailed understanding of SamaritanDB, please visit [the wiki](https://alg
 ![Deny Access](https://github.com/thewoodfish/Tic-Tac-Toe/blob/main/public/img/screen-9.png)
 
 ## Significance
+
 This project demonstrates the potential of user control and ownership over the content and information provided to internet applications and services.
 
 ## How It Works
@@ -53,14 +54,73 @@ The ink! smart contract powers this project. Users send requests to the contract
 The application communicates with SamaritanDB through a dedicated library. This integration is vital for seamless data management.
 
 ## Database
+
 Although experimental, SamaritanDB serves as a proof of concept for future development. The code provides a foundation for revolutionary ideas. View the code [here](https://github.com/algorealmInc/SamaritanDB).
 
 ## Contract
 
-The ink! smart contract is at the core of the network. Learn more about how the contract operates and facilitates user empowerment.
+SamaritanDB heavily utilizes the Ink! smart contract. In Tic-Tac-Toe, the contract is referenced in specific instances:
 
-![Empowered Users](empowered-users-image.png)
+1. **Generate DID**: User Decentralized Identifiers (DIDs) and private keys are generated, creating a user account on-chain. A transaction is submitted to the Ink! contract to mutate storage.
 
-This project exemplifies the potential of ink! and blockchain technology to empower users and revolutionize how we interact with digital applications and services.
+```js
+// JavaScript Code
+...
+await chain
+  .createID(chainApi, contract, samDB, sam_did, "elixir", signature)
+  .then(() =>
+    res.status(200).send({
+      error: false,
+      data: {
+        mnemonic,
+        sam_did,
+      },
+    })
+  );
+...
+```
 
-🚀 *Together, we're shaping a future where users have full control of their data.* 🚀
+2. **Check for DID existsence**: The game briefly references the contract storage to verify if a user account exists on-chain. This is achieved by indexing into its storage with the user's DID.
+
+```js
+// JavaScript Code
+...
+let user_exists = await chain.checkDidExistence(
+  chainApi,
+  contract,
+  samDB,
+  req.userDid
+);
+...
+```
+
+3. **Make Network data access change**: Ink! plays a pivotal role in this project. A user submits their DID and an application's DID to the contract to enforce data access restrictions or allowances.
+
+```js
+// JavaScript Code
+...
+await chain
+  .manageAccess(
+    chainApi,
+    contract,
+    user,
+    req.appDid,
+    req.userDid,
+    req.action == "allow" ? true : false
+  )
+  .then(() =>
+    res.status(200).send({
+      error: false,
+      data: {
+        msg: "operation successful",
+      },
+    })
+  );
+...
+```
+
+The Ink! smart contract is the backbone of the network. To gain a deeper understanding of how the contract operates and empowers users, please review the full code here.
+
+This project also exemplifies the potential of Ink! and blockchain technology to empower users and revolutionize our interactions with digital applications and services.
+
+🚀 _Together, we're shaping a future where users have full control of their data._ 🚀
