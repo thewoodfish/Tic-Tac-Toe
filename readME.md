@@ -67,7 +67,7 @@ You can view a demo of the game [here](https://algorealm.org/splash.html).
 
 ## Contract
 
-SamaritanDB heavily utilizes the ink! smart contract. In Tic-Tac-Toe, the contract is referenced in specific instances:
+SamaritanDB heavily utilizes the ink! smart contract. In Tic-Tac-Toe demonstration, the contract is referenced in specific instances:
 
 1. **Generate DID**: User Decentralized Identifiers (DIDs) and private keys are generated, creating a user account on-chain. A transaction is submitted to the ink! contract to mutate storage.
 
@@ -102,7 +102,10 @@ let user_exists = await chain.checkDidExistence(
 ...
 ```
 
-3. **Make Network data access change**: ink! plays a pivotal role in this project. A user submits their DID and an application's DID to the contract to enforce data access restrictions or allowances.
+3. **Enabling Data Access Control**
+
+A fundamental capability of this demonstration, powered by ink!, is the ability to control data access. Users can submit their unique Decentralized Identifiers (DID) and an application's DID to the contract, specifying access restrictions or allowances. The contract processes these requests, prompting the database nodes to swiftly adapt to the requested changes, ensuring robust data access control.
+
 
 ```js
 // JavaScript Code
