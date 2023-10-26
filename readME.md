@@ -67,6 +67,8 @@ To test the application, follow these steps:
 4. Open `127.0.0.0.1:3000` in your web browser.
 5. Enjoy!
 
+You can view a demo of the game [here](https://algorealm.org/splash.html).
+
 ## Contract
 
 SamaritanDB heavily utilizes the ink! smart contract. In Tic-Tac-Toe, the contract is referenced in specific instances:
