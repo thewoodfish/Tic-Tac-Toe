@@ -7,7 +7,7 @@ In this section, we delve into a comprehensive demonstration of an application b
 SamaritanDB represents a pioneering database solution engineered to offer internet users unprecedented control and sovereignty over their data within applications hosted on this innovative platform. In this context, we explore a practical application, the Tic-Tac-Toe game, as an example of how SamaritanDB empowers users to take charge of their digital interactions.
 For a detailed understanding of SamaritanDB, please visit [the wiki](https://algorealm.gitbook.io/samaritandb).
 
-## Flow
+## How It Works
 
 1. **Generate Your DID**: Start by creating your Decentralized Identifier (DID). This unique identifier is the key to your digital presence on the internet and interactions with applications like the game.
 
@@ -44,10 +44,6 @@ For a detailed understanding of SamaritanDB, please visit [the wiki](https://alg
 ## Significance
 
 This project demonstrates the potential of user control and ownership over the content and information provided to internet applications and services.
-
-## How It Works
-
-The ink! smart contract powers this project. Users send requests to the contract, generating events and making blockchain state changes. SamaritanDB nodes worldwide respond to these events and state changes, adapting to user decisions.
 
 ## Talking to SamaritanDB
 
